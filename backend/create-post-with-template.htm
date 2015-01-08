@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Template</title>
+<!-- TemplateEndEditable -->
+<link rel="stylesheet" type="text/css" href="backendstyle.css" />
+<script src="../script.js" type="text/javascript"></script>
+<script src="jquery.js" type="text/javascript"></script>
+<!-- TemplateBeginEditable name="head" -->
+<script src="backendscript.js" type="text/javascript"></script>
+<!-- TemplateEndEditable -->
+</head>
+
+<body id="trending" tracingsrc="/images/Create-Post.png" tracingopacity="51" tracingx="114" tracingy="0" >
+<div id="page-holder">
+  <div id="header">
+    <div id="apDiv1">Welcome alpha, LOGOUT</div>
+    <div id="header-texts"> <span id="main-header">How Rustless Are You?</span><span id="sub-header">...helping you stay RUSTLESS!!</span> </div>
+    
+    <!--
+		<noscript>
+		<div style="background: #F00; height: 100px; border:2px solid;">
+			
+			<h1 style="color:#444; font:1em bold;">Javascript is disabled!</h1>
+			<h3>Some features of this website may not work correctly because javascript is disabled. Enable javascript to use these features.</h3>
+			
+		</div>
+		</noscript>
+        !--> 
+  </div>
+  <div id="left-sidebar">
+    <ul id="left-sidebar-links">
+      <li class="sidebar-link" id="homeLink"><a href="#">Overview</a></li>
+      <li class="sidebar-link" id="topLink"><a href="#">Create Post</a></li>
+      <li class="sidebar-link" id="trendLink"><a href="#">Manage Posts</a></li>
+      <li class="sidebar-link" id="politicsLink"><a href="#">Manage Comments</a></li>
+      <li class="sidebar-link" id="entertainLink"><a href="#">Manage Categories</a></li>
+      <li class="sidebar-link" id="eduLink"><a href="#">Manage Users</a></li>
+    </ul>
+  </div>
+  <div id="right-float">
+    <div id="main-contents">
+      <div id="crumbs-container"> <a href="../index.php">Home</a> <a href="#">Admin Dashboard</a> <a href="#">Overview</a> </div>
+      <div id="contents"> <!-- TemplateBeginEditable name="contents" -->
+        <form name="form1" id="form1" method="post" action="">
+        <label for="post-title">
+        <p id="post-header">Post Title</p>
+        </label>
+        <input type="text" name="post-title" id="post-title" />
+        <div id="post-menu-bar">
+          <input type="button" name="img-upload" id="img-upload" value="" />
+          <input type="button" name="is-top-post" id="is-top-post" value="" />
+          <label for="cat-select">Category: </label>
+          <select name="cat-select" id="cat-select">
+            <option selected value="1">Testtable</option>
+            <option value="2">Trending</option>
+            <option value="3">Sports</option>
+          </select>
+          <input type="button" name="publish" id="publish" value="Publish" />
+        </div>
+        <div contenteditable="true" name="post-content" id="post-content"> </div>
+        <!-- TemplateEndEditable -->
+        <p>
+          <label for="tags">Tags:</label>
+          <input type="text" name="tags" id="tags" />
+          <span id="tag-hint">separate each tag with a comma(,)</span> </p>
+        </form>
+      </div><div id="u-load-box">
+    <div id="u-load-form-box" > <img src="images/img-close-btn.png" id="close-btn" />
+      <p id="u-load-heading" >Image Uploader</p>
+      <form name="u-load-form" enctype="multipart/form-data" id="u-load-form">
+        <table>
+          <tr>
+            <td>Choose an image:</td>
+            <td><input name="img" id="img" type="file" />
+              <p style="font-size: .5em">supported formats:jpg,gif,png</p></td>
+          </tr>
+          <tr>
+            <td>Image Name:</td>
+            <td><input type="text" name="img-name" id="img-name" /></td>
+          </tr>
+          <tr>
+            <td>Alternative text:</td>
+            <td><input type="text" name="alt-text" id="alt-text" /></td>
+          </tr>
+          <tr>
+            <td>Align:</td>
+            <td><select name="align" id="align">
+                <option selected value="left">Left</option>
+                <option value="center">Center</option>
+                <option value="right">Right</option>
+              </select></td>
+          </tr>
+          <tr>
+            <td>Featured?</td>
+            <td>Yes
+              <input type="radio" name="featured" id="featured-y" />
+              &nbsp;&nbsp;&nbsp;No
+              <input type="radio" name="featured" id="featured-n" checked /></td>
+          </tr>
+        </table>
+        <input style="margin:auto; display:block; -moz-box-align:center; -moz-box-pack: center; -ms-box-align:center; -ms-box-pack: center; -o-box-align:center; -o-box-pack: center; -webkit-box-align:center; -webkit-box-pack: center; box-align:center; box-pack: center;" type="button" value="Upload" />
+      </form>
+    </div>
+  </div>
+  <script type="text/javascript">
+  
+  	var img_upload = document.getElementById("img-upload");
+	var closer_btn = document.getElementById("close-btn");
+	
+	img_upload.addEventListener("click",function(){
+		$("#u-load-box").fadeIn(500);}, false);
+	closer_btn.addEventListener("click",function(){
+		$("#u-load-box").fadeOut(500);},false);
+		
+  
+  </script>
+    </div>
+  </div>
+  <div class="footer-links-style" id="footer">
+    <div class="footer-links-style" id="footer-links-left"> <a href="../index.php">Home</a> <a href="../category.php?category=sports">Sports</a> <a href="../category.php?category=politics">Politics</a> </div>
+    <div class="footer-links-style" id="footer-links-center"> <a href="#">Top Stories</a> <a href="../category.php?category=entertainment">Entertainment</a> <a href="../category.php?category=education">Education</a> </div>
+    <div class="footer-links-style" id="footer-links-right"> <a href="../category.php?category=trending">Trending</a> <a href="#">Contact Us</a> <a href="#">Feeds</a> <a href="../category.php?category=news">News</a> </div>
+    <span id="copyright">AlphaDev Copyright © 2014</span> </div>
+  
+  <script type="text/javascript">
+	document.onload = loaded();
+</script> 
+</div>
+</body>
+</html>

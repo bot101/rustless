@@ -1,0 +1,294 @@
+/* sitewide styles*/
+
+
+
+body{
+
+	position:relative;
+	transition:0.2s;
+
+
+}
+
+.buttons{
+
+	height:30px;
+	width:150px;
+	border: 1px solid #ABCBEB;
+	border-radius: 2px;
+	padding: 5px;
+	margin: 5px;
+
+	}
+
+.buttons:hover{
+
+	background: #ABCBEB;
+	color: #FFF;
+	font-weight: bold;
+	}
+
+.inputBox{
+
+	height:40px;
+	width:200px;
+	border: 1px solid #ABCBEB;
+	border-radius: 2px;
+	padding: 5px;
+	margin: 5px;
+
+	}
+
+#crumbs-container{
+
+	height: 50px;
+	margin-bottom: 5px;
+	border-bottom: solid 1px #ABCBEB;
+	padding-left: 10px;
+	
+	}
+	
+#crumbs-container a{
+
+	height: 30px;
+	width:auto;
+	float:left;
+	margin:10px 0;
+	color:#444;
+	display:block;
+	padding-right:10px;
+	background: url(crumbs.jpg) 100% 50% no-repeat;
+
+	}
+	
+/* end of sitewide styles*/
+
+/*page holder styles*/
+
+#page-holder{
+	max-width: 980px;
+	min-width: 810px;
+	margin: auto;
+	margin-top:0;
+	display:  none;
+	position:relative;
+	top:-8px;
+	}
+
+/*end of page holder styles*/
+
+/*header styles*/
+
+#header{
+	height:100px;
+	width:100%;
+	background: #ABCBEB url(yyy.png) no-repeat ;
+	background-position: 10px 2px;
+	font-family:  Lucida Verdana sans-serif Arial;
+	color: #555;
+	margin-bottom: 10px;
+	}
+
+#header-texts{
+	margin-left:110px;
+	padding-top: 25px;
+	}
+
+#main-header {
+	font: 1.6em bold;
+	display: block;	
+	}
+/*end of header styles*/
+
+/*left-sidebar styles*/
+
+
+#left-sidebar{
+
+	width: 200px;
+	background: #ABCBEB;	
+	float:left;
+	margin-right: 10px;
+	font-variant: small-caps;
+	height:500px;	
+	}
+
+#left-sidebar-links{
+	list-style-type:none;
+	padding: 20px 0 0 0;
+	width:200px;
+	float:left;
+	height:20px;
+	}
+	
+#left-sidebar-links .sidebar-link li  {
+	
+	}
+
+.sidebar-link a{
+	text-decoration:none;
+	float:right;
+	font: .5em;
+	display: block;
+	padding: 0 25% 0 25%;
+	width:96px;
+	margin:5px 0;
+	color:#444;
+	height:20px;
+	}
+
+.sidebar-link a:hover{
+	background-image: url(here2.jpg);
+	background-repeat:no-repeat;
+	background-position: 100% 100%;
+	border: #666666;	
+	border-left: 4px solid;
+	}
+
+#home #homeLink a,#politics #politicsLink a,#education #eduLink a,#sports #sportsLink a,#entertainment #entertainLink a,#news #newsLink a,#trending #trendLink a{
+	background-image: url(here2.jpg);
+	background-repeat:no-repeat;
+	background-position: 100% 100%;	
+	border-left: 4px solid;
+
+	}
+	
+#login-container{
+	
+	width: 300px;
+	height: 150px;
+	position: fixed;
+	top: 33.333%;
+	left: 33.333%;
+	border: 1px #666666 solid;
+	background: #CCC;
+	border-radius: 10px;
+	z-index:1500;
+	display:none;
+	
+}
+
+#login-container>table{
+	
+	margin:auto;
+	margin-top: 20px;
+	
+}
+	
+/*end of left sidebar styles*/
+
+/*right float*/
+
+#right-float{
+	width: auto;
+	min-height: 520px;
+	}
+/* right sidebar */
+
+#right-sidebar{
+	
+	box-shadow: 3px 3px #ABC;
+	-ms-box-shadow: 3px 3px #ABC;
+	float:right;
+	width:200px;
+	margin: 0 3px 50px 5px;
+	border-left:1px #ABC solid;
+	overflow: hidden;
+	zoom:1;
+	
+	}
+
+#right-sidebar a{
+
+	text-decoration:none;
+	color:#000;
+
+	}
+	
+	
+#top-posts{
+
+
+	font: bolder 1.2em;
+	font-variant: small-caps;
+	padding-left: 3px;	
+	}
+
+.post-topic-title{
+
+	font-variant: capitalize;
+	background: #ABCBEB;
+	display: block;
+	color: #000;
+	padding-left:3px;
+	
+	}
+
+.post-topic-partcontent{
+
+	padding: 2px 0 5px 3px;
+
+	}
+/* end of right sidebar */
+
+#main-contents{
+
+	font: Cambria;
+	margin-right:5px;
+	overflow: hidden;
+	
+	}
+
+#contents{
+
+	paddding-bottom:50px;
+	
+	}
+/*end of right float */
+
+/* footer styles */
+
+#footer{
+
+	clear:both;
+	margin: 20px 0 0 0;
+	width: 100%;
+	height: 150px;
+	background: #ABCBEB;
+	margin-top: 100px;
+
+	}
+
+.footer-links-style{
+
+	width: 20%;
+	margin: 20px 0 0 10%;
+	float: left;
+	
+	}
+
+.footer-links-style a{
+
+	display: block;
+	text-align:center;
+	text-decoration: none;
+	font-family:cambria;
+	font-size: .8em;
+	font-weight:bold;
+	color: #444;
+	font-variant:small-caps;
+	padding: 0 0 10px 0;
+	}
+	
+#footer #copyright{
+
+	display: block;
+	text-align:center;
+	font-size:.6em;
+	clear: both;
+	margin-top: 20px;
+
+	}
+	
+/*end of footer styles */
+

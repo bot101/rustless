@@ -1,0 +1,551 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+<title>Rustless::Category Name</title>
+
+
+<script type="text/javascript">
+ 
+function displayFn() {
+
+	document.getElementById('page-holder').style.display = 'block';
+
+	}
+
+function commentBoxDisplay(){
+
+	cContainer = document.getElementById("comment-container");
+	cBoxButton = document.getElementById("comment-box-button");	
+
+	if (cContainer.style.display == 'block'){
+		cContainer.style.display = 'none';
+		cBoxButton.innerHTML = 'Post A Comment';
+		}
+		 else {
+		cContainer.style.display = 'block';
+		cBoxButton.innerHTML = 'Hide Comment Box';
+		}
+
+	}
+
+function clearInput( inputValue) {
+	
+	forming = document.forms.item(0);
+	defValues	= ['Name', 'Email', " Your Comments here "];
+	index = parseInt(inputValue);
+
+	if (forming[index].value == defValues[index]) {
+	forming[index].value = ' ';
+		} else {
+		
+		}
+
+	}
+
+function resetDefault(inputValue2) {
+	
+	forming = document.forms.item(0);
+	defValues	= ["Name", "Email", " Your Comments here "];
+	index = parseInt(inputValue2);
+	
+	if (forming[index].value == '' || forming[index].value == ' ') {
+
+		forming[index].value = defValues[index];
+
+		}
+
+	}
+
+</script>
+
+<style type="text/css">
+
+/* sitewide styles*/
+
+
+.buttons{
+
+	height:30px;
+	width:150px;
+	border: 1px solid #ABCBEB;
+	border-radius: 2px;
+	padding: 5px;
+	margin: 5px;
+
+	}
+
+.buttons:hover{
+
+	background: #ABCBEB;
+	color: #FFF;
+	font-weight: bold;
+	}
+	
+#crumbs-container{
+
+	height: 50px;
+	margin-bottom: 5px;
+	border-bottom: solid 1px #ABCBEB;
+	padding-left: 10px;
+	
+	}
+	
+#crumbs-container a{
+
+	height: 30px;
+	width:auto;
+	float:left;
+	margin:10px 0;
+	color:#444;
+	display:block;
+	padding-right:10px;
+	background: url(crumbs.jpg) 100% 50% no-repeat;
+
+	}
+	
+/* end of sitewide styles*/
+
+/*page holder styles*/
+
+#page-holder{
+	max-width: 980px;
+	min-width: 800px;
+	margin: auto;
+	display:  none;
+	}
+
+/*end of page holder styles*/
+
+/*header styles*/
+
+#header{
+	height:150px;
+	width:100%;
+	background: #ABCBEB url(yyy.png) no-repeat ;
+	background-position: 10px 3px;
+	font-family:  Lucida Verdana sans-serif Arial;
+	color: #555;
+	margin-bottom: 10px;
+	}
+
+#header-texts{
+	margin-left:200px;
+	padding-top: 50px;
+	}
+
+#main-header {
+	font: 1.6em bold;
+	display: block;	
+	}
+/*end of header styles*/
+
+/*left-sidebar styles*/
+
+
+#left-sidebar{
+
+	width: 200px;
+	background: #ABCBEB;	
+	float:left;
+	margin-right: 10px;
+	font-variant: small-caps;
+	height:500px;	
+	}
+
+#left-sidebar-links{
+	list-style-type:none;
+	padding: 20px 0 0 0;
+	width:200px;
+	float:left;
+	}
+
+#left-sidebar-links .sidebar-link{
+	;
+	}
+
+.sidebar-link a{
+	text-decoration:none;
+	float:right;
+	font: .5em;
+	display: block;
+	padding: 0 25% 0 25%;
+	width:100px;
+	margin:5px 0;
+	color:#444;
+	}
+
+.sidebar-link a:hover{
+	background-image: url(here2.jpg);
+	background-repeat:no-repeat;
+	background-position: 100% 100%;
+	border: #666666;	
+	border-bottom: 2px solid;
+	}
+
+#home #homeLink a,#politics #politicsLink a,#edu #eduLink a,#sports #sportsLink a,#entertain #entertainLink a,#news #newsLink a,#trend #trendLink a{
+	background-image: url(here2.jpg);
+	background-repeat:no-repeat;
+	background-position: 100% 100%;	
+
+	}
+	
+/*end of left sidebar styles*/
+
+/*right float*/
+
+#right-float{
+	width: auto;
+	min-height: 520px;
+	}
+/* right sidebar */
+
+#right-sidebar{
+	
+	box-shadow: 3px 3px #ABC;
+	float:right;
+	width:200px;
+	margin: 0 3px 50px 5px;
+	border-left:1px #ABC solid;
+	overflow: hidden;
+	
+	}
+
+#top-posts{
+
+
+	font: bolder 1.2em;
+	font-variant: small-caps;
+	padding-left: 3px;	
+	}
+
+.post-topic-title{
+
+	font-variant: capitalize;
+	background: #ABCBEB;
+	display: block;
+	color: #000;
+	padding-left:3px;
+	
+	}
+
+.post-topic-partcontent{
+
+	padding: 2px 0 5px 3px;
+
+	}
+/* end of right sidebar */
+
+#main-contents{
+
+	font: Cambria;
+	margin-right:5px;
+	overflow: hidden;
+	
+	}
+
+#contents{
+
+	padding-bottom:50px;
+	
+	}
+	
+.content-header-container{
+
+	font-variant: small-caps !important;
+	border-bottom: 2px solid #ABCBEB;
+	width: auto;
+	margin-bottom: 10px;
+	}
+
+
+.content-title{
+
+	font-variant: small-caps !important;
+	font: 1.2em bold;
+	width: 50%;
+
+	}
+
+.content-posted-date{
+
+	display:inline-block;
+	font: .6em;
+	width: 30%;
+
+	}
+
+#comment-container{
+
+	margin: 50px 0 0 0;	
+	display: none;
+	}
+
+#comment-container input{
+
+	height:30px;
+	width:150px;
+	border: 1px solid #ABCBEB;
+	border-radius: 2px;
+	padding: 5px;
+	margin: 5px;
+
+	}
+
+
+#comment-container textarea{
+
+	height:150px;
+	width: 90%;
+	border: 1px solid #ABCBEB;
+	border-radius: 2px;
+	padding: 5px;
+	margin: 0 5px;
+
+	}
+
+#related-posts-container{
+
+	margin-top: 10px;
+
+	}
+
+.related-post{
+
+	margin: auto;
+	width: 45%;
+	padding: 5px;
+	float: left;
+
+	}
+
+/*end of right float */
+
+/* footer styles */
+
+#footer{
+
+	clear:both;
+	margin: 20px 0 0 0;
+	width: 100%;
+	height: 150px;
+	background: #ABCBEB;
+	margin-top: 50px;
+
+	}
+
+.footer-links-style{
+
+	width: 20%;
+	margin: 20px 0 0 10%;
+	float: left;
+	
+	}
+
+.footer-links-style a{
+
+	display: block;
+	text-align:center;
+	text-decoration: none;
+	font-family:cambria;
+	font-size: .8em;
+	font-weight:bold;
+	color: #444;
+	font-variant:small-caps;
+	padding: 0 0 10px 0;
+	}
+	
+#footer #copyright{
+
+	display: block;
+	text-align:center;
+	font-size:.6em;
+	clear: both;
+	margin-top: 20px;
+
+	}
+	
+/*end of footer styles */
+
+/*category page styles*/
+
+#category-name-container{
+
+	}
+/*	
+#category-name
+.category-content
+.category-post-header
+*/
+.category-full-story-link {
+
+	display: block;
+	float: right;
+	margin-right: 20px;
+	text-decoration: none;
+	color: #444;
+	padding: 3px;
+	font-weight: bold;
+	border-radius: 2px;
+	border: 1px solid #444;
+	
+	}
+
+.category-full-story-link:hover {	
+
+	background: #ABCBEB;
+	border:2px solid #444;
+	color:#FFF;
+	
+	}
+	
+#more-links {
+
+	margin:50px auto 10px;
+	text-align:center;
+
+	
+	}
+
+#more-links a{
+
+	margin-right:5px;
+	color:#444;
+	padding:5px;
+	background:#ABCBEB;
+	text-decoration:none;
+	border-radius:10px;
+
+	}
+
+#more-links a:hover {
+	
+	background:#444;
+	color:#FFF;
+	
+	}
+/*end of category page styles*/
+
+</style>
+</head>
+
+<body id="home" onload = 'displayFn()'>
+<div id="page-holder" >
+
+	<div id="header">
+		<div id="header-texts">
+			<span id="main-header">How Rustless Are You?</span><span id="sub-header">...helping you stay RUSTLESS!!</span>
+		</div>
+	</div>
+	<div id="left-sidebar">
+
+		<ul id="left-sidebar-links">
+	
+			<li class="sidebar-link" id="homeLink"><a href="home.htm">Home</a></li>
+			<li class="sidebar-link" id="topLink"><a href="topstories.htm">Top Stories</a></li>
+			<li class="sidebar-link" id="trendLink"><a href="trending.htm">Trending</a></li>
+			<li class="sidebar-link" id="politicsLink"><a href="politics.htm">Politics</a></li>
+			<li class="sidebar-link" id="entertainLink"><a href="entertainment.htm">Entertainment</a></li>
+			<li class="sidebar-link" id="eduLink"><a href="education.htm">Education</a></li>
+			<li class="sidebar-link" id="sportsLink"><a href="sports.htm">Sports</a></li>
+			<li class="sidebar-link" id="newsLink"><a href="news.htm">News</a></li>
+
+		</ul>
+
+
+	</div>
+	<div id="right-float">
+	
+		<div id="right-sidebar">
+			<span id="top-posts">Top Posts</span>
+			<div class="post-snippet-main-container">
+
+				<span class="post-topic-title">New Post Snippet Here!</span>
+				<div class="post-topic-partcontent">
+				This container holds part of a top post's content, click on the container to continue reading. . .
+				</div>
+			</div>
+
+			<div class="post-snippet-main-container">
+
+				<span class="post-topic-title">New Post Snippet Here!</span>
+				<div class="post-topic-partcontent">
+				This container holds part of a top post's content, click on the container to continue reading. . .
+				</div>
+			</div>
+
+			<div class="post-snippet-main-container">
+
+				<span class="post-topic-title">New Post Snippet Here!</span>
+				<div class="post-topic-partcontent">
+				This container holds part of a top post's content, click on the container to continue reading. . .
+				</div>
+			</div>
+
+			<div class="post-snippet-main-container">
+
+				<span class="post-topic-title">New Post Snippet Here!</span>
+				<div class="post-topic-partcontent">
+				This container holds part of a top post's content, click on the container to continue reading. . .
+				</div>
+			</div>
+
+			<div class="post-snippet-main-container">
+
+				<span class="post-topic-title">New Post Snippet Here!</span>
+				<div class="post-topic-partcontent">
+				This container holds part of a top post's content, click on the container to continue reading. . .
+				</div>
+			</div>
+
+		</div>
+		<div id="main-contents">
+		
+			<div id="crumbs-container">
+				<a href="#">Home</a>
+				<a href="#">Category</a>
+				<a href="#">Post Title</a>
+			</div>
+		
+			<div id="contents">
+				
+				<div class="category-content">
+					<h1 class="content-title">Post Header Text</h1>
+				Here's a semi-complete post in a sample category. The page displays portions of the last 10 posts made in the category, provides links to see the full story in post.php on every post content and displays links at the bottom of the page for older posts(displays 10 posts at a time).<br />
+				Almost all page content is loaded with php effectively making this a blog-like CMS website. Every other thing on this page goes thus...
+				
+				<a class="category-full-story-link" href="#">read more...</a>
+				</div>
+
+			</div>
+			
+			<div id="more-links"><a href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a></div>
+			
+		</div>
+		
+	</div>
+	
+	<div id="footer">
+	
+		<div class="footer-links-style" id="footer-links-left">
+			<a href="#">Home</a> <a href="#">Sports</a> <a href="#">Politics</a>
+		</div>
+
+		<div  class="footer-links-style" id="footer-links-center">
+			<a href="#">Top Stories</a> <a href="#">Entertainment</a> <a href="#">Education</a>
+		</div>
+
+		<div class="footer-links-style" id="footer-links-right">
+			<a href="#">Trending</a> <a href="#">Contact Us</a> <a href="#">Feeds</a>
+		</div>
+		<span id="copyright">AlphaDev Copyright &copy; 2014</span>
+
+	</div>
+</div>
+
+</body>
+
+
+</html>

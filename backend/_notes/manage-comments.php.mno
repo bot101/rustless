@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_comment_list" value="name:id;datatype:int,name:comment_post_id;datatype:int,name:comment_cat_id;datatype:int,name:commenter_id;datatype:int,name:comment;datatype:blob,name:comment_likes;datatype:int" />
+</info>

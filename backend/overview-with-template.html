@@ -1,0 +1,205 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Template</title>
+<style type="text/css">
+#post,#edit,#comment,#category,#users{
+	width: 100px;
+	height: 100px;
+	margin: 30px auto;
+	}
+
+#post,#edit,#comment,#category,#users :hover{
+	
+	cursor: pointer;
+	
+	}
+	
+.menu-text {
+	
+	display:block;
+	margin: auto;
+	text-align: center;
+	color: #AAA;
+	font-weight: bold;
+	
+	}
+	
+#post {	
+	background-image: url(images/menus.png);
+	background-position: 0px 0px;	
+	}
+	
+#post:hover {	
+	background-image: url(images/menus.png);
+	background-position: 100px 0px;	
+	}
+	
+#edit {	
+	background-image: url(images/menus.png);
+	background-position: 0px -100px;	
+	}
+	
+#edit:hover {	
+	background-image: url(images/menus.png);
+	background-position: 100px -100px;	
+	}
+	
+#comment {	
+	background-image: url(images/menus.png);
+	background-position: 0px -200px;	
+	}
+	
+#comment:hover {	
+	background-image: url(images/menus.png);
+	background-position: 100px -200px;	
+	}
+		
+#category {	
+	background-image: url(images/menus.png);
+	background-position: 0px -300px;	
+	}
+	
+#category:hover {	
+	background-image: url(images/menus.png);
+	background-position: 100px -300px;	
+	}
+		
+#users {	
+	background-image: url(images/menus.png);
+	background-position: 0px -400px;	
+	}
+	
+#users:hover {	
+	background-image: url(images/menus.png);
+	background-position: 100px -400px;	
+	}
+	
+.overview-icons {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	box-shadow: 4px 4px 4px #666666;
+	font-size: 14px;
+	font-style: normal;
+	text-decoration: none;
+	background-color: #FDFDFD;
+	display: block;
+	padding: 20px;
+	float: left;
+	height: 200px;
+	width: 200px;
+	margin-right: 10px;
+	margin-bottom: 20px;
+	border: 1px solid #7C7C7C;
+	-webkit-transition: all .5s .2s;
+	-moz-transition: all .5s .2s;
+	-ms-transition: all .5s .2s;
+	-o-transition: all .5s .2s;
+	transition: all .5s .2s;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	box-shadow:
+	
+}
+
+</style>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" type="text/css" href="../backendstyle.css" />
+<style type="text/css">
+#apDiv1 {
+	width: auto;
+	height: 25px;
+	float: right;
+	display: block;
+	font-size:11px;
+	padding-top:10px;
+	margin: 0 10px;	
+}
+</style>
+<!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" type="text/css" href="backendstyle.css" />
+<!-- InstanceEndEditable -->
+</head>
+
+<body id="trending" tracingsrc="../images/manage-comments.png" tracingopacity="51" tracingx="114" tracingy="0" >
+<div style="display: block;" id="page-holder">
+
+	<div id="header">
+    <div id="apDiv1">Welcome alpha, LOGOUT</div>
+		<div id="header-texts">
+			<span id="main-header">How Rustless Are You?</span><span id="sub-header">...helping you stay RUSTLESS!!</span>
+		</div>
+		
+        <!--
+		<noscript>
+		<div style="background: #F00; height: 100px; border:2px solid;">
+			
+			<h1 style="color:#444; font:1em bold;">Javascript is disabled!</h1>
+			<h3>Some features of this website may not work correctly because javascript is disabled. Enable javascript to use these features.</h3>
+			
+		</div>
+		</noscript>
+        !-->
+	</div>	
+	
+	<div id="left-sidebar">
+
+		<ul id="left-sidebar-links">
+	
+			<li class="sidebar-link" id="homeLink"><a href="#">Overview</a></li>
+			<li class="sidebar-link" id="topLink"><a href="#">Create Post</a></li>
+			<li class="sidebar-link" id="trendLink"><a href="#">Manage Posts</a></li>
+			<li class="sidebar-link" id="politicsLink"><a href="#">Manage Comments</a></li>
+			<li class="sidebar-link" id="entertainLink"><a href="#">Manage Categories</a></li>
+			<li class="sidebar-link" id="eduLink"><a href="#">Manage Users</a></li>
+
+		</ul>
+
+
+	</div>
+	
+	<div id="right-float">
+<div id="main-contents">
+      <div id="crumbs-container"> <a href="../index.php">Home</a> <a href="#">Admin Dashboard</a> <a href="#">Overview</a> </div>
+      <div id="contents"> 
+<!-- InstanceBeginEditable name="contents" -->
+<div class="overview-icons"><div id="post"></div><span class="menu-text">Create Post</span></div>
+<div class="overview-icons" ><div id="edit"></div><span class="menu-text">Manage Posts</span></div>
+<div class="overview-icons"><div id="comment"></div><span class="menu-text">Manage Comments</span></div>
+<div class="overview-icons"><div id="category"></div><span class="menu-text">Manage Categories</span></div>
+<div class="overview-icons"><div id="users"></div><span class="menu-text">Manage Users</span></div>
+
+
+<!-- InstanceEndEditable -->	</div>
+</div>
+	</div>
+	
+	<div class="footer-links-style" id="footer">
+	
+		<div class="footer-links-style" id="footer-links-left">
+			<a href="../index.php">Home</a> <a href="../category.php?category=sports">Sports</a> <a href="../category.php?category=politics">Politics</a>
+		</div>
+
+		<div class="footer-links-style" id="footer-links-center">
+			<a href="#">Top Stories</a> <a href="../category.php?category=entertainment">Entertainment</a> <a href="../category.php?category=education">Education</a>
+		</div>
+
+		<div class="footer-links-style" id="footer-links-right">
+			<a href="../category.php?category=trending">Trending</a> <a href="#">Contact Us</a> <a href="#">Feeds</a> <a href="../category.php?category=news">News</a>
+		</div>
+		<span id="copyright">AlphaDev Copyright © 2014</span>
+
+	</div>
+<script type="text/javascript">
+	document.onload = loaded();
+</script></div>
+
+
+
+
+
+</body>
+<!-- InstanceEnd --></html>

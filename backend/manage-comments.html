@@ -1,0 +1,164 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Template</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" type="text/css" href="backendstyle.css" />
+<style type="text/css">
+#apDiv1 {
+	width: auto;
+	height: 25px;
+	float: right;
+	display: block;
+	font-size:11px;
+	padding-top:10px;
+	margin: 0 10px;	
+}
+</style>
+<!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" type="text/css" href="../SpryAssets/SpryCollapsiblePanel.css" />
+<script type="text/javascript" src="backendscript.js"></script>
+<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="../jquery.js"></script>
+<!-- InstanceEndEditable -->
+</head>
+
+<body id="trending" tracingsrc="images/manage-users.png" tracingopacity="51" tracingx="114" tracingy="0" >
+<div style="display: block;" id="page-holder">
+
+	<div id="header">
+    <div id="apDiv1">Welcome alpha, LOGOUT</div>
+		<div id="header-texts">
+			<span id="main-header">How Rustless Are You?</span><span id="sub-header">...helping you stay RUSTLESS!!</span>
+		</div>
+		
+        <!--
+		<noscript>
+		<div style="background: #F00; height: 100px; border:2px solid;">
+			
+			<h1 style="color:#444; font:1em bold;">Javascript is disabled!</h1>
+			<h3>Some features of this website may not work correctly because javascript is disabled. Enable javascript to use these features.</h3>
+			
+		</div>
+		</noscript>
+        !-->
+	</div>	
+	
+	<div id="left-sidebar">
+
+		<ul id="left-sidebar-links">
+	
+			<li class="sidebar-link" id="homeLink"><a href="#">Overview</a></li>
+			<li class="sidebar-link" id="topLink"><a href="#">Create Post</a></li>
+			<li class="sidebar-link" id="trendLink"><a href="#">Manage Posts</a></li>
+			<li class="sidebar-link" id="politicsLink"><a href="#">Manage Comments</a></li>
+			<li class="sidebar-link" id="entertainLink"><a href="#">Manage Categories</a></li>
+			<li class="sidebar-link" id="eduLink"><a href="#">Manage Users</a></li>
+
+		</ul>
+
+
+	</div>
+	
+	<div id="right-float">
+<div id="main-contents">
+      <div id="crumbs-container"> <a href="index.php">Home</a> <a href="#">Admin Dashboard</a> <a href="#">Overview</a> </div>
+      <div id="contents"><!-- InstanceBeginEditable name="contents" -->
+             <table width="100%" border="0" cellspacing="0" cellpadding="0" id="commlist">
+          <tr>
+            <th scope="col">Comment</th>
+            <th scope="col">Post</th>
+            <th scope="col">Category</th>
+            <th scope="col">Action</th>
+          </tr>   
+          <tr>         
+            <td>This is a comment p...</td>
+            <td>This is a post tit..</td>
+            <td>Trending</td>
+            <td><button class="delete edit">Delete</button><button class="edit">Edit</button></td>
+          </tr>
+          <tr>
+            <td>This is a comment 1p...</td>
+            <td>This is a post tit..</td>
+            <td>Politics</td>
+            <td><button class="delete edit">Delete</button><button class="edit">Edit</button></td>
+          </tr>
+          <tr>
+            <td>This is a 2comment p...</td>
+            <td>This is a post tit..</td>
+            <td>Education</td>
+            <td><button class="delete edit">Delete</button><button class="edit">Edit</button></td>
+          </tr>
+        </table>
+ <div onclick="javascript: this.style.display = 'none'"; id="commentEditor" style="position:fixed; top: 50%; left:0; z-index:2000; width:100%; background: url(images/gradient-black.png); height:50%; display:none;">
+ <div style="width:500px; position:relative; margin:30px auto; background:#FFF; height:80%; padding:3%;">
+ 	<textarea style="float:left; width:250px; height:200px; margin:1%; overflow:auto;"></textarea>
+ 	<div >
+ 	  <p>Posted by: alpha</p>
+ 	  <p>On: 25/5/014</p>
+ 	  <p>In: Trending&gt;This is a post Title... 	</p>
+ 	</div>
+ </div>
+ </div>
+ 
+ <script>
+ function showEditor(j){
+	 //displays the comment editor if not already displayed and loads the comments from the server
+	 // loading comments will be handled when serverside is programmed
+	 var commEdit = j.currentTarget;
+	 var commEditor = document.getElementById("commentEditor");
+ if (!(commEditor.style.display == "block")) $("#commentEditor").fadeIn(1000);	 
+ }
+ 
+ var TRs = document.getElementsByTagName("tr");
+ 
+ for(i = 1; i < TRs.length; i++){
+	 
+	 TRs[i].addEventListener("click", function(h){
+	//sets background of selected comment
+	 if (!(h.currentTarget.id == "selected-tr")){
+		 var TRWithId = document.getElementById("selected-tr");
+		if (TRWithId) TRWithId.removeAttribute("id");
+		 h.currentTarget.setAttribute("id","selected-tr");
+	 } else {
+		
+		h.currentTarget.setAttribute("id","selected-tr");
+	 }
+	 });
+	
+	TRs[i].addEventListener("click", function(j){showEditor(j)}) 
+	 
+ }
+ </script>
+<!-- InstanceEndEditable -->	</div>
+</div>
+	</div>
+	
+	<div class="footer-links-style" id="footer">
+	
+		<div class="footer-links-style" id="footer-links-left">
+			<a href="index.php">Home</a> <a href="category.php?category=sports">Sports</a> <a href="category.php?category=politics">Politics</a>
+		</div>
+
+		<div class="footer-links-style" id="footer-links-center">
+			<a href="#">Top Stories</a> <a href="category.php?category=entertainment">Entertainment</a> <a href="category.php?category=education">Education</a>
+		</div>
+
+		<div class="footer-links-style" id="footer-links-right">
+			<a href="category.php?category=trending">Trending</a> <a href="#">Contact Us</a> <a href="#">Feeds</a> <a href="category.php?category=news">News</a>
+		</div>
+		<span id="copyright">AlphaDev Copyright © 2014</span>
+
+	</div>
+<script type="text/javascript">
+	document.onload = loaded();
+</script></div>
+
+
+
+
+
+</body>
+<!-- InstanceEnd --></html>

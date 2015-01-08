@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Template</title>
+<link rel="stylesheet" type="text/css" href="../style.css"
+</head>
+
+<body id="trending">
+<div style="display: block;" id="page-holder">
+
+	<div id="header">
+		<div id="header-texts">
+			<span id="main-header">How Rustless Are You?</span><span id="sub-header">...helping you stay RUSTLESS!!</span>
+		</div>
+		
+		<noscript>
+		<div style="background: #F00; height: 100px; border:2px solid;">
+			
+			<h1 style="color:#444; font:1em bold;">Javascript is disabled!</h1>
+			<h3>Some features of this website may not work correctly because javascript is disabled. Enable javascript to use these features.</h3>
+			
+		</div>
+		</noscript>
+	</div>	
+	
+	<div id="left-sidebar">
+
+		<ul id="left-sidebar-links">
+	
+			<li class="sidebar-link" id="homeLink"><a href="index.php">Home</a></li>
+			<li class="sidebar-link" id="topLink"><a href="#">Top Stories</a></li>
+			<li class="sidebar-link" id="trendLink"><a href="category.php?category=trending">Trending</a></li>
+			<li class="sidebar-link" id="politicsLink"><a href="category.php?category=politics">Politics</a></li>
+			<li class="sidebar-link" id="entertainLink"><a href="category.php?category=entertainment">Entertainment</a></li>
+			<li class="sidebar-link" id="eduLink"><a href="category.php?category=education">Education</a></li>
+			<li class="sidebar-link" id="sportsLink"><a href="category.php?category=sports">Sports</a></li>
+			<li class="sidebar-link" id="newsLink"><a href="category.php?category=news">News</a></li>
+
+		</ul>
+
+
+	</div>
+	
+	<div id="right-float">
+		
+	
+		<div id="right-sidebar">
+			<span id="top-posts">Top Posts</span>
+			<div class="post-snippet-main-container"><a href="post.php?category=sports&amp;id=11"><span class="post-topic-title">Post Title 11(Sports)</span><div class="post-topic-partcontent">This is the default sports post 11 post This is the default sports post This is the default sports post This is the default sports post This is the de...</div></a></div><div class="post-snippet-main-container"><a href="post.php?category=sports&amp;id=19"><span class="post-topic-title">Post Title 19(Sports)</span><div class="post-topic-partcontent">This is the default sports post 19 post This is the default sports post This is the default sports post This is the default sports post This is the de...</div></a></div><div class="post-snippet-main-container"><a href="post.php?category=news&amp;id=10"><span class="post-topic-title">Post Title 10(News)</span><div class="post-topic-partcontent">This is the default news post 10 post This is the default news post This is the default news post This is the default news post This is the default ne...</div></a></div><div class="post-snippet-main-container"><a href="post.php?category=education&amp;id=12"><span class="post-topic-title">Post Title 12(Education)</span><div class="post-topic-partcontent">This is the default education post 12 post This is the default education post This is the default education post This is the default education post Th...</div></a></div><div class="post-snippet-main-container"><a href="post.php?category=education&amp;id=18"><span class="post-topic-title">Post Title 18(Education)</span><div class="post-topic-partcontent">This is the default education post 18 post This is the default education post This is the default education post This is the default education post Th...</div></a></div>		</div>
+
+		<div id="main-contents">
+		
+			<div id="crumbs-container">
+				<a href="index.php">Home</a>
+				<a href="category.php?category=trending">Trending</a>
+				<a href="post.php?category=trending&amp;id=20">Post Title 20</a>
+			</div>
+			
+			<div id="contents">
+				
+				<div class="content-header-container">
+					<span class="content-title">Post Title 20</span>
+					<br>
+					<span class="content-posted-date">2014-10-22 16:19:03</span>
+				</div>
+				
+				<div class="post-content">
+				This is the default trending post 20 post This is the default trending post This is the default trending post This is the default trending post This is the default trending post This is the default trending post This is the default trending post This is the default trending post This is the default trending post This is the default trending post 				</div>
+
+				<div style="margin: 30px 20px 0 0; margin-left: 20%;" id="view-comments-container">
+				
+				<span class="buttons" id="comment-box-button"> Post A Comment </span>
+				<span class="buttons" id="view-comments-button" onclick="loadPost('20','trending')"> View Comments(8) </span>
+
+				</div>
+				
+				<div id="wait-box" style="display:none; position:fixed; top:200px; margin:auto; width:400px; height:200px; background: #444;">
+				
+					Please Wait...***
+				
+				</div>
+
+				<div id="related-posts-container">
+					<div class="related-post"><a href="post.php?category=trending&amp;id=11"><span class="post-topic-title">Post Title 11...</span><div class="post-topic-partcontent">This is the default trending post 11 post This is the default trending post This is the default trending post This is the default trending post This i...</div></a></div><div class="related-post"><a href="post.php?category=trending&amp;id=9"><span class="post-topic-title">Post Title 9...</span><div class="post-topic-partcontent">This is the default trending post 9 post This is the default trending post This is the default trending post This is the default trending post This is...</div></a></div>				</div>
+
+				
+				<div id="comment-container">
+
+					<form action="" method="post" name="comment-form">
+	  
+						Name <input name="name" id="name" value="Name" onblur="resetDefault(&quot;0&quot;)" onfocus="clearInput(&quot;0&quot;)" type="text">
+ 					<span style="display: inline-block;">Email <input id="email" name="email" value="Email" onblur="resetDefault(&quot;1&quot;)" onfocus="clearInput(&quot;1&quot;)" type="email"></span>
+					<br>
+					<textarea name="comment" onblur="resetDefault(2)" onfocus="clearInput(&quot;2&quot;)"> Your Comments here </textarea>
+					<br>
+					<input value="8" type="hidden">
+					<span style="margin: 30px 20px 0 0; margin-left: 20%; display:block;"><input onclick="postComment('20','trending')" class="buttons" name="submit" value="Comment" type="button"> <input class="buttons" value="Clear Form" type="reset"></span>
+		
+					</form>			
+
+				</div>
+				
+				
+				<div id="posted-comment-container">
+				
+				</div>
+				
+			</div>
+		</div>
+	
+		</div>
+	
+	<div id="footer">
+	
+		<div class="footer-links-style" id="footer-links-left">
+			<a href="index.php">Home</a> <a href="category.php?category=sports">Sports</a> <a href="category.php?category=politics">Politics</a>
+		</div>
+
+		<div class="footer-links-style" id="footer-links-center">
+			<a href="#">Top Stories</a> <a href="category.php?category=entertainment">Entertainment</a> <a href="category.php?category=education">Education</a>
+		</div>
+
+		<div class="footer-links-style" id="footer-links-right">
+			<a href="category.php?category=trending">Trending</a> <a href="#">Contact Us</a> <a href="#">Feeds</a> <a href="category.php?category=news">News</a>
+		</div>
+		<span id="copyright">AlphaDev Copyright © 2014</span>
+
+	</div>
+<script type="text/javascript">
+	document.onload = loaded();
+</script></div>
+
+
+
+
+</body>
+</html>

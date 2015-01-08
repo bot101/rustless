@@ -1,0 +1,185 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/rustless/backend/Templates/template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Template</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" type="text/css" href="backendstyle.css" />
+<style type="text/css">
+#apDiv1 {
+	width: auto;
+	height: 25px;
+	float: right;
+	display: block;
+	font-size:11px;
+	padding-top:10px;
+	margin: 0 10px;	
+}
+</style>
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+
+<body id="trending" tracingsrc="images/manage-users.png" tracingopacity="51" tracingx="114" tracingy="0" >
+<div style="display: block;" id="page-holder">
+
+	<div id="header">
+    <div id="apDiv1">Welcome alpha, LOGOUT</div>
+		<div id="header-texts">
+			<span id="main-header">How Rustless Are You?</span><span id="sub-header">...helping you stay RUSTLESS!!</span>
+		</div>
+		
+        <!--
+		<noscript>
+		<div style="background: #F00; height: 100px; border:2px solid;">
+			
+			<h1 style="color:#444; font:1em bold;">Javascript is disabled!</h1>
+			<h3>Some features of this website may not work correctly because javascript is disabled. Enable javascript to use these features.</h3>
+			
+		</div>
+		</noscript>
+        !-->
+	</div>	
+	
+	<div id="left-sidebar">
+
+		<ul id="left-sidebar-links">
+	
+			<li class="sidebar-link" id="homeLink"><a href="#">Overview</a></li>
+			<li class="sidebar-link" id="topLink"><a href="#">Create Post</a></li>
+			<li class="sidebar-link" id="trendLink"><a href="#">Manage Posts</a></li>
+			<li class="sidebar-link" id="politicsLink"><a href="#">Manage Comments</a></li>
+			<li class="sidebar-link" id="entertainLink"><a href="#">Manage Categories</a></li>
+			<li class="sidebar-link" id="eduLink"><a href="#">Manage Users</a></li>
+
+		</ul>
+
+
+	</div>
+	
+	<div id="right-float">
+<div id="main-contents">
+      <div id="crumbs-container"> <a href="index.php">Home</a> <a href="#">Admin Dashboard</a> <a href="#">Overview</a> </div>
+      <div id="contents"><!-- InstanceBeginEditable name="contents" -->
+      <div id="lookup-container">
+        <label for="lookup-type">Look Up User By: </label>
+        <select name="lookup-type" id="lookup-type">
+        	<option selected="selected" value="username">Username</option>
+            <option value="email">Email</option>
+            <option value="phone">Phone Number</option>
+            <option value="name">Full Name</option>
+        </select>
+        <input type="text" id="search-term" name="search-term" />
+        <input name="look-up" id="look-up" type="button" value="Look Up" />
+        
+      </div>
+        <form action="" method="post" name="user-detail" id="user-detail">
+        <label for="full-name">Name</label>
+        <input name="full-name" disabled="disabled" type="text" id="full-name" value="" /><br />
+        <label for="username">Username</label>
+        <input name="username" disabled="disabled" type="text" id="username" value="" /><br />
+        <label for="email">Email</label>
+        <input name="email" disabled="disabled" type="email" id="email" value="" /><br />
+        <label for="password">Password</label>
+        <input name="password" disabled="disabled" type="password" id="password" value="" /><br />
+        <label for="phone">Phone No.</label>
+        <input name="phone" disabled="disabled" type="text" id="phone" value="" /><br />
+        <label for="sec-q1">Security Question 1</label>
+        <input name="sec-q1" disabled="disabled" type="text" id="sec-q1" value="" /><br />
+        <label for="sec-ans1">Answer</label>
+        <input name="sec-ans1" disabled="disabled" type="text" id="sec-ans1" value="" /><br />
+        <label for="sec-q2">Security Question 2</label>
+        <input name="sec-q2" disabled="disabled" type="text" id="sec-q2" value="" /><br />
+        <label for="sec-ans2">Answer</label>
+        <input name="sec-ans2" disabled="disabled" type="text" id="sec-ans2" value="" /><br />
+        <input type="submit" id="user-edit" value="Edit" />
+        
+        </form>
+        
+       <div id="options">
+         <div id="option-head">Site Activity</div>
+         <table id="site-act">
+         <tr>
+         <td>Comment count:</td><td>3</td>
+         </tr>
+         <tr>
+         <td>Likes received:</td><td>10</td>
+         </tr>
+         <tr>
+         <td>Comments liked:</td><td>35</td>
+         </tr>
+         
+         </table>
+         </div>
+         
+         <script type="text/javascript">
+		 	
+			function editView(e){
+				e.preventDefault();
+				if(e.currentTarget.value == "Edit"){
+				
+					e.currentTarget.value = "Update";
+					//ajax call here
+					
+				}
+				inputTags = document.forms[0].getElementsByTagName("input");
+				for(i=0;i<inputTags.length;i++){
+					
+					if(!(inputTags[i].id == "user-edit")){
+					
+						inputTags[i].style.borderWidth = "1px";
+						inputTags[i].style.borderStyle = "solid";
+						inputTags[i].disabled = null;
+						
+					}
+					
+				}
+				
+			}
+			
+			var editBtn = document.getElementById("user-edit");
+			/*document.body.addEventListener("load",function(){
+				inputTags = document.forms[0].getElementsByTagName("input");
+				for(i=0;i<inputTags.length;i++){
+					
+					if(!(inputTags[i].id == "user-edit")){
+					
+						inputTags[i].disabled = "disabled";
+						
+					}
+				}
+			});*/
+				
+			editBtn.addEventListener("click",function(e){editView(e)});
+		 </script>
+<!-- InstanceEndEditable -->	</div>
+</div>
+	</div>
+	
+	<div class="footer-links-style" id="footer">
+	
+		<div class="footer-links-style" id="footer-links-left">
+			<a href="index.php">Home</a> <a href="category.php?category=sports">Sports</a> <a href="category.php?category=politics">Politics</a>
+		</div>
+
+		<div class="footer-links-style" id="footer-links-center">
+			<a href="#">Top Stories</a> <a href="category.php?category=entertainment">Entertainment</a> <a href="category.php?category=education">Education</a>
+		</div>
+
+		<div class="footer-links-style" id="footer-links-right">
+			<a href="category.php?category=trending">Trending</a> <a href="#">Contact Us</a> <a href="#">Feeds</a> <a href="category.php?category=news">News</a>
+		</div>
+		<span id="copyright">AlphaDev Copyright © 2014</span>
+
+	</div>
+<script type="text/javascript">
+	document.onload = loaded();
+</script></div>
+
+
+
+
+
+</body>
+<!-- InstanceEnd --></html>

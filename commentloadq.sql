@@ -1,0 +1,1 @@
+SELECT c.id, u.username, co.* FROM category_list c, userbase u, comments co WHERE co.comment_cat_id = c.id AND co.comment_post_id = 20 AND c.category = 'trending' AND co.commenter_id = u.id ORDER BY comment_date DESC
