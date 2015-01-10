@@ -55,7 +55,7 @@ body{
 	color:#444;
 	display:block;
 	padding-right:10px;
-	background: url(../crumbs.jpg) 100% 50% no-repeat;
+	background: url(../crumbs.png) 100% 50% no-repeat;
 
 	}
 	
@@ -118,10 +118,6 @@ body{
 	float:left;
 	height:20px;
 	}
-	
-#left-sidebar-links .sidebar-link li  {
-	
-	}
 
 .sidebar-link a{
 	text-decoration:none;
@@ -133,18 +129,17 @@ body{
 	margin:5px 0;
 	color:#444;
 	height:40px;
+	zoom:1;
 	}
+	
+*html .sidebar-link{
+	
+	margin-left: 0;	
+	
+}
 
-.sidebar-link a:hover{
-	background-image: url(../here2.jpg);
-	background-repeat:no-repeat;
-	background-position: 100% 50%;
-	border: #666666;	
-	border-left: 4px solid;
-	}
-
-#home #homeLink a,#politics #politicsLink a,#education #eduLink a,#sports #sportsLink a,#entertainment #entertainLink a,#news #newsLink a,#trending #trendLink a{
-	background-image: url(../here2.jpg);
+#home #homeLink a,#politics #politicsLink a,#education #eduLink a,#sports #sportsLink a,#entertainment #entertainLink a,#news #newsLink a,#trending #trendLink a,.sidebar-link a:hover, #is-active a{
+	background-image: url(../here2.png);
 	background-repeat:no-repeat;
 	background-position: 100% 50%;	
 	border-left: 4px solid;
@@ -292,13 +287,11 @@ body{
 }
 
 #is-top-post{
-
 	background-image: url(images/create-post-icons.png);
 	background-position: 0 -25px;
 	background-repeat: no-repeat;
 	width:30px;
 	height: 30px;	
-	
 }
 
 #publish {
@@ -326,30 +319,24 @@ body{
 }
 
 #post-content{
-	
 	width: 500px;
 	height: 300px;
 	border: 2px solid #ABCBEB;
 	margin-top: 10px;
 	padding: 5px;
-	
 }
 
 #tags{
-	
 	width: 300px;
 	border: 2px solid #ABCBEB;
 	height: 15px;
-	
 }
 
 #tag-hint{
-	
 	color:#999;
 	font: bold .1em;
 	display: block;
 	margin-left: 50px;
-	
 }
 
 #apDiv1 {
@@ -358,12 +345,15 @@ body{
 	float: right;
 	display: block;
 	font-size:11px;
-	padding-top:10px;
+	padding:10px 5px 5px;
+	border: 1px #000 solid;
 	margin: 0 10px;	
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	background-image:url(../loginbg.png);
 }
 
 #close-btn{
-	
 	background: url(images/img-close-btn.png) no-repeat; 
 	width:30px; 
 	height: 30px; 
@@ -373,11 +363,9 @@ body{
 	top: -15px; 
 	left: 395px;
 	cursor:pointer;	
-	
 }
 
 #u-load-box{
-	
 	display:none; 
 	position:fixed; 
 	top: 0; 
@@ -386,39 +374,27 @@ body{
 	width:100%; 
 	height:100%; 
 	background:url(images/gradient-black.png) repeat; 
-	
 }
 
 #u-load-form-box{
-	
 	margin:15% auto; 
 	background: #FFF; 
 	width:400px; 
 	height: auto; 
 	padding: 0 10px 10px;
-	
 }
 
 #u-load-heading{
-	
 	text-align:center; 
 	font-weight:bold; 
 	font-size: 1em; 
 	padding: 5px; 
 	margin-top: -30px;
-	
 }
 
 #u-load-form-box td{
-	
 	line-height: 10px;
 	vertical-align:center;
-}
-
-#u-load-form{
-	
-	
-	
 }
 
 #catlist{
@@ -432,18 +408,13 @@ body{
 	width: 100%;
 }
 
-#commlist TR{
-	
-	cursor:pointer;
-	
+#commlist TR{	
+	cursor:pointer;	
 }
 
-#commlist TR:first-of-type{
-	
-	cursor:default;
-	
+#commlist TR:first-of-type{	
+	cursor:default;	
 }
-
 
 #commlistId{
 	background-color:#FFF !important;	
@@ -453,66 +424,50 @@ body{
 	height:40px;
 	background:#ABCBEB;
 	line-height: 40px;
-
 }
 
-#catlist TD,#commlist TD{
-	
+#catlist TD,#commlist TD{	
 	height:30px;
-	/*border: 1px solid #ABD;*/
+	border: 1px solid #ABD;
 	vertical-align:middle;
 	border: none;	
 }
 
 #catlist TR{
-	
 	cursor:default;
-		
 }
 
 #catlist TR:nth-child(odd),#commlist TR:nth-child(odd){
-	
 	background:#CCC;	
-	
 }
 
 #catlist TR:hover,#commlist TR:hover{
-	
 	background:#9ABACA;
-	
 }
 
 #options{
-	
 	border:1px solid #ABD;	
 	overflow:hidden;
 	max-width:250px;
-		
 }
 
 #option-head{
-	
 	line-height: 40px;
 	background: #999;
 	text-align:center;
 	font-size: 1.2em;
-	
 }
 
 #catcreate{
-
 	padding:20px;	
-	
 }
 
 #catcreate input[type=text]{
-	
 	height:30px;
 	margin-left: 0px;	
 }
 
 #selected-tr{
-	
 	background-color:#9ABACA !important;
 }
 
@@ -537,15 +492,11 @@ body{
 }
 
 #lookup-container p{
-
 	float:left;
 	width:auto;	
-	
-	
 }
 
 #user-detail{
-	
 	margin: 0 10px;
 	padding: 10px;
 	font-size:0.9em;
@@ -554,71 +505,73 @@ body{
 	text-height:font-size;
 	max-width: 450px;
 	float:left;
-	
-	
 }
 
 #user-detail label{
-	
 	display:inline-block;
 	width:150px;
 	line-height: 15px;
 	margin-bottom:3px;
-	
 }
 
 #user-detail input,#search-term,#lookup-type{
-	
 	height: 19px;
 	border:#ABCBEB;
 	margin-bottom:3px;
 	width: 200px;
 	padding:2px;
-	
 }
 
 #lookup-type{
-
 	width:150px;
-	height: 25px !important;
+	height: 25px;
 	border:1px solid #ABCBEB;
-		
+}
+
+select{
+	font-weight:200;
+	text-align:center;
+	text-transform:capitalize;
+}
+
+option{
+	height: 20px;
+	line-height:15px;
+	background: #ABCBEB;
+	border: none;
+	border-bottom: 1px solid #666666;
+	color: #333;
+}
+
+option:nth-child(odd){	
+	background:#FFF !important;
 }
 
 #search-term{
-	
-	border:1px solid #ABCBEB;
-	
+	border:1px solid #ABCBEB;	
 }
 
 #user-edit{
-
 	width:50px !important;
 	height:25px !important;
 	display:block;
 	margin:0 0 10px 25%;
 	background:#ABCBEB;		
-	
 }
 
-#look-up{
-	
+#look-up{	
 	background:#ABCBEB;
 	border: 1px solid #ABCBEB;
 	padding:2px;
 	line-height: 19px !important;
-	
 }
 
 #user-edit:hover,#look-up:hover{
-
 	background:#BCDCFC;	
 }
 
 #user-edit:active,#look-up:active{
-	
 	border:inset 2px;
-	
 }
 
 
@@ -630,8 +583,7 @@ body{
 	border-right: solid 1px #999;
 }
 
- .edit{
-	 
+ .edit{ 
 	display:inline-block;
 	float: right;
 	line-height:20px;
@@ -645,34 +597,25 @@ body{
 	background:#ABCBEB;
 	border: 1px solid #ABCBEB;
 	padding:2px;
-	line-height: 19px !important;
-	 
+	line-height: 19px !important; 
  }
  
- .delete{
-	 
+ .delete{	 
 	 background: #C00;
 	 margin-right:10px;
-	 border:none !important;
-	 
+	 border:none !important;	 
  }
  
- .edit:hover{
-	 
-	 background:#BCDCFC;
-	 
+ .edit:hover{	 
+	 background:#BCDCFC;	 
  }
  
- .edit:active{
-	 
-	border:inset 2px;	 
-	 
+ .edit:active{	 
+	border:inset 2px;	  
  }
  
-  .delete:hover{
-	 
+  .delete:hover{ 
 	 background:#E00;
-	 
  }
  
  .delete:active{
@@ -698,16 +641,13 @@ body{
 	border-bottom: solid 1px #CCC;
 }
 
-.CollapsiblePanelTab input{
-	
+.CollapsiblePanelTab input{	
 	position: absolute;
 	top: 25%;
-	left: 50%;	
-	
+	left: 50%;		
 }
 
 .seemore{
-
 	height:10px;
 	display:block; 
 	background:#00A; 
@@ -715,7 +655,6 @@ body{
 	font-size:9px; 
 	color:#FFF; 
 	line-height:10px;	
-	
 }
 
 .CollapsiblePanelContent {
@@ -728,12 +667,10 @@ body{
 	cursor:default;
 }
 
-.CollapsiblePanelContent input{
-	
+.CollapsiblePanelContent input{	
 	position: absolute;
 	top: 25%;
-	left: 50%;	
-	
+	left: 50%;
 }
 
 .list-of-posts{
@@ -757,8 +694,7 @@ body{
 	background-color: #3399FF;
 }
 
-#cat-select{
-	
+#cat-select{	
 	height:25px;
 	width: 150px;
 	border: #ABCBEB 1px solid;

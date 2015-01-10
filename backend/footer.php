@@ -16,8 +16,7 @@
 
 	</div>
 <script type="text/javascript">
-	document.onload = loaded();
-	document.onload = ajaxer("create-post");
+	document.onload = init();
 </script>
 </body>
 </html>

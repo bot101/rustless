@@ -9,12 +9,17 @@
 	width: 100px;
 	height: 100px;
 	margin: 30px auto;
-	}
-
-#post,#edit,#comment,#category,#users :hover{
-	
 	cursor: pointer;
-	
+	-webkit-transition: all 0s .2s;
+	-moz-transition: all 0s .2s;
+	-ms-transition: all 0s .2s;
+	-o-transition: all 0s .2s;
+	transition: all 0s .2s;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+
 	}
 	
 .menu-text {
@@ -22,7 +27,6 @@
 	display:block;
 	margin: auto;
 	text-align: center;
-	color: #AAA;
 	font-weight: bold;
 	
 	}
@@ -32,7 +36,7 @@
 	background-position: 0px 0px;	
 	}
 	
-#post:hover {	
+.overview-icons:hover #post {	
 	background-image: url(images/menus.png);
 	background-position: 100px 0px;	
 	}
@@ -42,7 +46,7 @@
 	background-position: 0px -100px;	
 	}
 	
-#edit:hover {	
+.overview-icons:hover #edit {	
 	background-image: url(images/menus.png);
 	background-position: 100px -100px;	
 	}
@@ -52,7 +56,7 @@
 	background-position: 0px -200px;	
 	}
 	
-#comment:hover {	
+.overview-icons:hover #comment {	
 	background-image: url(images/menus.png);
 	background-position: 100px -200px;	
 	}
@@ -62,7 +66,7 @@
 	background-position: 0px -300px;	
 	}
 	
-#category:hover {	
+.overview-icons:hover #category {	
 	background-image: url(images/menus.png);
 	background-position: 100px -300px;	
 	}
@@ -72,9 +76,10 @@
 	background-position: 0px -400px;	
 	}
 	
-#users:hover {	
+.overview-icons:hover #users {	
 	background-image: url(images/menus.png);
 	background-position: 100px -400px;	
+	
 	}
 	
 .overview-icons {
@@ -82,6 +87,7 @@
 	box-shadow: 4px 4px 4px #666666;
 	font-size: 14px;
 	font-style: normal;
+	color: #AAA;
 	text-decoration: none;
 	background-color: #FDFDFD;
 	display: block;
@@ -101,13 +107,16 @@
 	-moz-border-radius: 10px;
 	-ms-border-radius: 10px;
 	-o-border-radius: 10px;
-	box-shadow:
+}
+
+.overview-icons:hover{
+
+	color: #ABCBEB;
+	cursor:pointer;	
+	box-shadow: 4px 4px 4px #ABCBEB;
 	
 }
 
-</style>
-
-<style type="text/css">
 #apDiv1 {
 	width: auto;
 	height: 25px;
@@ -134,14 +143,11 @@
 		<div id="header-texts">
 			<span id="main-header">How Rustless Are You?</span><span id="sub-header">...helping you stay RUSTLESS!!</span>
 		</div>
-		
 
-		<noscript>
-		<div style="background: #F00; height: 100px; border:2px solid;">
-			
+	<noscript>
+		<div style="background: #F00; height: 100px; border:2px solid;">			
 			<h1 style="color:#444; font:1em bold;">Javascript is disabled!</h1>
-			<h3>Some features of this website may not work correctly because javascript is disabled. Enable javascript to use these features.</h3>
-			
+			<h3>Some features of this website may not work correctly because javascript is disabled. Enable javascript to use these features.</h3>			
 		</div>
 		</noscript>
 

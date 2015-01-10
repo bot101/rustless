@@ -213,20 +213,7 @@ $content =<<<CONTENT
       </form>
     </div>
   </div>
-  $script_start
   
-  	var img_upload = document.getElementById("img-upload");
-	var closer_btn = document.getElementById("close-btn");
-	
-	img_upload.addEventListener("click",function(){
-		$("#u-load-box").fadeIn(500);}, false);
-	closer_btn.addEventListener("click",function(){
-		$("#u-load-box").fadeOut(500);},false);
-		
-  
-  $script_end
-
-
 CONTENT;
 				echo $content;
 				
@@ -305,6 +292,7 @@ TFOOT;
 			break;
 			
 			case "manage-category":
+			$output = "";
 			
 $table_head =<<<TABLEHEAD
 
@@ -380,11 +368,11 @@ LOOKUP;
 			
 $overview =<<<OVERVIEW
 
-<div class="overview-icons"><div id="post"></div><span class="menu-text">Create Post</span></div>
-<div class="overview-icons" ><div id="edit"></div><span class="menu-text">Manage Posts</span></div>
-<div class="overview-icons"><div id="comment"></div><span class="menu-text">Manage Comments</span></div>
-<div class="overview-icons"><div id="category"></div><span class="menu-text">Manage Categories</span></div>
-<div class="overview-icons"><div id="users"></div><span class="menu-text">Manage Users</span></div>
+<div class="overview-icons" onclick="javascript:ajaxer('create-post')"><div id="post"></div><span class="menu-text">Create Post</span></div>
+<div class="overview-icons" onclick="javascript:ajaxer('manage-post')"><div id="edit"></div><span class="menu-text">Manage Posts</span></div>
+<div class="overview-icons" onclick="javascript:ajaxer('manage-comments')"><div id="comment"></div><span class="menu-text">Manage Comments</span></div>
+<div class="overview-icons" onclick="javascript:ajaxer('manage-category')"><div id="category"></div><span class="menu-text">Manage Categories</span></div>
+<div class="overview-icons" onclick="javascript:ajaxer('manage-users')"><div id="users"></div><span class="menu-text">Manage Users</span></div>
 
 OVERVIEW;
 			
